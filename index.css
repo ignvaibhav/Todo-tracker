@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(75, 90, 255 */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.glass {
+    background: rgba(255, 184, 69, 0.573); /* Transparent White */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+
+/*Design Code for Nav bar & .title tag  */
+
+nav{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    position: relative;
+    margin-top:6vh;
+}
+nav p{
+    font-family: "Imperial Script", cursive;
+    color: rgb(0, 0, 0);
+    font-size: 7vw;
+    font-weight: bold;
+}
+
+@media (max-width: 700px){ /*for responsive sizing of tablets*/
+    nav p, main{
+        font-size: 5vw;
+    }
+    
+}
+@media (max-width: 450px){ /*for responsive sizing of mobiles*/
+    nav p{
+        font-size: 7vw;
+    }  
+}
+
+/* 
+
+------------------------------------------------------
+Design code for <main> tag
+------------------------------------------------------
+*/
+
+main{
+    max-height: 90%;
+    margin-top: 5%;
+    gap: 20px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+#todo, #working, #done{
+    border-radius: 10px;
+    position: sticky;
+    /* border-radius: 15px; */
+    box-shadow: 1px 1px 0 black;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px; */
+    background-color: rgba(255, 255, 255, 0.866);
+    width: 25%;
+    max-width: 30%;
+    /* min-width: 25%; */
+}
+
+.inner-working, .inner-todos, .inner-done{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    width: 100%;
+}
+
+@media (max-width: 450px){ /*for responsive sizing of mobiles*/
+    #todo, #working, #done{
+        border-radius: 5%;
+    }
+
+    .todo{
+        border-radius: 3px;
+    }
+}
+
+.heading{
+    /* margin-right: 10vw; */
+    /* padding: 10px; */
+    right: 6vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.column-text{
+    margin-bottom: 0.5vh;
+    margin-top: 1vh;
+    color: rgb(0, 0, 0);
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    font-weight:500;
+    /* font-family:Arial, Helvetica, sans-serif; */
+}
+
+.todos{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.todo{
+    outline: 0.2px solid black;
+    gap: 1vh;
+    border-radius: 5px;
+    text-align: center;
+    /* height: 7vh; */
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 0.7vw;
+    font-size: 1.2vw;
+    cursor: grabbing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo:hover{
+    box-shadow: 3px 3px 1px rgb(29, 27, 57);
+    outline: 2px solid black;
+    padding: 1vw;
+    transition: 0.2s ease-in-out;
+}
+
+.upper-todo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-todo > p{
+    padding-bottom: 5px;
+    /* padding-right: 20px; */
+}
+
+.upper-todo > input{
+    cursor: grab;
+    border: none;
+    padding: 0.7vw;
+    /* padding-right: 100px; */
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.upper-todo > input::placeholder{
+    color: black;
+    opacity: 50%;
+}
+
+.upper-todo > input:focus{
+    border: 0px solid red;
+    outline: none;
+}
+
+.upper-todo > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.416);
+    padding: 1vw;
+    border-radius: 5px;
+    border: none;
+    color: rgb(0, 0, 0);
+    margin-right: 0.2vw;
+    font-weight: 500;
+    opacity: 80%;
+    height: 2vh;
+    width: 4vw;
+}
+
+.upper-todo > button:hover{
+    /* box-shadow: 0px 0px 10px rgb(255, 193, 58); */
+    background-color: rgb(255, 193, 58);
+    color: rgb(0, 0, 0);
+    /* font-weight: bold; */
+    transition: 0.2s ease-in-out;
+}
+
+.lower-todo, .todo-options{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1vw;
+    /* padding-right: 2.8vw; */
+}
+
+.lower-todo{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: 100%;
+    display: none;
+}
+
+.todo-options > img{
+    height: 15px;
+    filter: grayscale(100%) brightness(0);
+}
+
+.todo-options > img:hover{
+    filter: grayscale(0%) brightness(100%);
+    /* box-shadow: 0px 0px 10px red; */
+    
+}
+
+.status{
+    filter: grayscale(0%) brightness(100%);
+    position: relative;
+    left: 9.5vw;
+}
+
+.status:hover{
+    height: 15px;
+    filter: grayscale(100%) brightness(0);
+}
+
+.add-more{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    cursor:grabbing;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1vw;
+    /* background-color: antiquewhite; */
+    width: 100%;
+    padding: 8px;
+}
+
+.add-more:hover{
+    transition: 0.1s ease-in-out;
+    /* padding: 8px; */
+    border-radius: 8px;
+    /* margin: 10px; */
+    background-color: rgba(255, 193, 58, 0.382);
+    color: rgb(0, 0, 0);
+}
+
+.dragging{
+    opacity: 50%;
+    transition: ease-in-out;
+    padding: 1.2vw;
+    outline: none;
+
+}
+
+.dragged{
+    opacity: 100%;
+
+}
+
+.red{
+    transition: 0.3s ease-in-out;
+    background-color: red;
+}
